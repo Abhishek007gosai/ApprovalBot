@@ -54,11 +54,16 @@ async def op(_, m :Message):
         await m.reply_text("**<b><blockquote>Aᴄᴄᴇss Dᴇɴɪᴇᴅ!\nJᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Mᴇ.Iғ Yᴏᴜ Jᴏɪɴᴇᴅ Tʜᴇ Cʜᴀɴɴᴇʟ Tʜᴇɴ Cʟɪᴄᴋ Oɴ Cʜᴇᴄᴋ Aɢᴀɪɴ Bᴜᴛᴛᴏɴ Tᴏ Cᴏɴғɪʀᴍ</blockquote></b>**", reply_markup=key)
         return 
     keyboard = InlineKeyboardMarkup(
-        [[
-            InlineKeyboardButton("ᴇᴛᴇʀɴᴀʟs", url="https://t.me/EternalsHelplineBot"),
-            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/Anime_Eternals")
-        ]]
-    )
+        [
+           [
+               InlineKeyboardButton("ᴇᴛᴇʀɴᴀʟs", url="https://t.me/EternalsHelplineBot"),
+               InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/Anime_Eternals")
+           ],
+           [
+               InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ", url="https://telegram.me/QuickAcceptBot?startchannel=true&admin=invite_users")
+           ]
+        ]
+    ) 
     add_user(m.from_user.id)
     await m.reply_photo("https://files.catbox.moe/gyklg0.jpg", caption="**<b><blockquote>Hᴇʟʟᴏ {}!! I'ᴍ ᴀɴ ᴀᴜᴛᴏ ᴀᴘᴘʀᴏᴠᴇ Bᴏᴛ</blockquote>\n<blockquote>I ᴄᴀɴ ᴀᴘᴘʀᴏᴠᴇ ᴜsᴇʀs ɪɴ Gʀᴏᴜᴘs/Cʜᴀɴɴᴇʟs.Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ ᴛᴏ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴀᴅᴅ ᴍᴇᴍʙᴇʀs ᴘᴇʀᴍɪssɪᴏɴ</blockquote></b>**".format(m.from_user.mention, ""), reply_markup=keyboard)
     
