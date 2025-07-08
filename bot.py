@@ -51,7 +51,7 @@ async def op(_, m :Message):
                 InlineKeyboardButton("🍀 Check Again 🍀", callback_data="chk")
             ]]
         ) 
-        await m.reply_text("**⚠️Access Denied!⚠️\n\nPlease Join My Update Channel To Use Me.If You Joined The Channel Then Click On Check Again Button To Confirm.**", reply_markup=key)
+        await m.reply_text("**<b><blockquote>Aᴄᴄᴇss Dᴇɴɪᴇᴅ!\nPʟᴇᴀsᴇ Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Mᴇ.Iғ Yᴏᴜ Jᴏɪɴᴇᴅ Tʜᴇ Cʜᴀɴɴᴇʟ Tʜᴇɴ Cʟɪᴄᴋ Oɴ Cʜᴇᴄᴋ Aɢᴀɪɴ Bᴜᴛᴛᴏɴ Tᴏ Cᴏɴғɪʀᴍ</blockquote></b>**", reply_markup=key)
         return 
     keyboard = InlineKeyboardMarkup(
         [[
@@ -74,8 +74,8 @@ async def chk(_, cb : CallbackQuery):
         return 
     keyboard = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton("🗯 Channel", url="https://t.me/vj_botz"),
-            InlineKeyboardButton("💬 Support", url="https://t.me/vj_bot_disscussion")
+            InlineKeyboardButton("ᴇᴛᴇʀɴᴀʟs", url="https://t.me/EternalsHelplineBot"),
+            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/Anime_Eternals")
         ]]
     )
     add_user(m.from_user.id)
