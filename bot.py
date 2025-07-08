@@ -26,7 +26,7 @@ async def approve(_, m : Message):
     try:
         add_group(m.chat.id)
         await app.approve_chat_join_request(op.id, kk.id)
-        await app.send_message(kk.id, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @VJ_Botz __**".format(m.from_user.mention, m.chat.title))
+        await app.send_message(kk.id, "**Hello {}!\nWelcome To**".format(m.from_user.mention, m.chat.title))
         add_user(kk.id)
     except errors.PeerIdInvalid as e:
         print("user isn't start bot(means group)")
@@ -46,12 +46,12 @@ async def op(_, m :Message):
             await m.reply("**Make Sure I Am Admin In Your Channel**")
             return 
         key = InlineKeyboardMarkup(
-            [[
-                InlineKeyboardButton("🍿 Join Update Channel 🍿", url=invite_link.invite_link),
-                InlineKeyboardButton("🍀 Check Again 🍀", callback_data="chk")
-            ]]
-        ) 
-        await m.reply_text("**<b><blockquote>Aᴄᴄᴇss Dᴇɴɪᴇᴅ!\nPʟᴇᴀsᴇ Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Mᴇ.Iғ Yᴏᴜ Jᴏɪɴᴇᴅ Tʜᴇ Cʜᴀɴɴᴇʟ Tʜᴇɴ Cʟɪᴄᴋ Oɴ Cʜᴇᴄᴋ Aɢᴀɪɴ Bᴜᴛᴛᴏɴ Tᴏ Cᴏɴғɪʀᴍ</blockquote></b>**", reply_markup=key)
+            [
+              [InlineKeyboardButton("Jᴏɪɴ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ", url=invite_link.invite_link)],
+              [InlineKeyboardButton("Cʜᴇᴄᴋ Aɢᴀɪɴ", callback_data="chk")]
+            ]
+        )
+        await m.reply_text("**<b><blockquote>Aᴄᴄᴇss Dᴇɴɪᴇᴅ!\nJᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Mᴇ.Iғ Yᴏᴜ Jᴏɪɴᴇᴅ Tʜᴇ Cʜᴀɴɴᴇʟ Tʜᴇɴ Cʟɪᴄᴋ Oɴ Cʜᴇᴄᴋ Aɢᴀɪɴ Bᴜᴛᴛᴏɴ Tᴏ Cᴏɴғɪʀᴍ</blockquote></b>**", reply_markup=key)
         return 
     keyboard = InlineKeyboardMarkup(
         [[
@@ -79,7 +79,7 @@ async def chk(_, cb : CallbackQuery):
         ]]
     )
     add_user(m.from_user.id)
-    await cb.edit_text(text="**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powered By : @VJ_Botz __**".format(cb.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard)
+    await cb.edit_text(text="**<b><blockquote></blockquote>Hᴇʟʟᴏ {}!! I'ᴍ ᴀɴ ᴀᴜᴛᴏ ᴀᴘᴘʀᴏᴠᴇ Bᴏᴛ</blockquote>\nI ᴄᴀɴ ᴀᴘᴘʀᴏᴠᴇ ᴜsᴇʀs ɪɴ Gʀᴏᴜᴘs/Cʜᴀɴɴᴇʟs.Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ ᴛᴏ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴀᴅᴅ ᴍᴇᴍʙᴇʀs ᴘᴇʀᴍɪssɪᴏɴ</b>**".format(cb.from_user.mention, ""), reply_markup=keyboard)
     
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ info ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
