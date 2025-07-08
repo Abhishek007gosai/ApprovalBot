@@ -25,25 +25,19 @@ async def approve(_, m: Message):
     try:
         add_group(m.chat.id)
         await app.approve_chat_join_request(op.id, kk.id)
-
-        # One button only
         keyboard = InlineKeyboardMarkup(
             [[InlineKeyboardButton("ᴇᴛᴇʀɴᴀʟs", url="https://t.me/EternalsHelplineBot")]]
         )
-
         await app.send_message(
             kk.id,
             f"**Hello {kk.mention}!\nWelcome To @Animw_Eternals**",
             reply_markup=keyboard
         )
-
         add_user(kk.id)
-
     except errors.PeerIdInvalid:
         print("User hasn't started the bot (group join case)")
     except Exception as err:
         print(str(err))
- 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Start ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 @app.on_message(filters.private & filters.command("start"))
