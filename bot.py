@@ -78,7 +78,7 @@ async def chk(_, cb : CallbackQuery):
             InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/Anime_Eternals")
         ]]
     )
-    add_user(m.from_user.id)
+    add_user(query.from_user.id)
     await cb.edit_text(text="**<b><blockquote></blockquote>Hᴇʟʟᴏ {}!! I'ᴍ ᴀɴ ᴀᴜᴛᴏ ᴀᴘᴘʀᴏᴠᴇ Bᴏᴛ</blockquote>\nI ᴄᴀɴ ᴀᴘᴘʀᴏᴠᴇ ᴜsᴇʀs ɪɴ Gʀᴏᴜᴘs/Cʜᴀɴɴᴇʟs.Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ ᴛᴏ ᴀᴅᴍɪɴ ᴡɪᴛʜ ᴀᴅᴅ ᴍᴇᴍʙᴇʀs ᴘᴇʀᴍɪssɪᴏɴ</b>**".format(cb.from_user.mention, ""), reply_markup=keyboard)
     
 
