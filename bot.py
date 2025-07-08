@@ -43,7 +43,6 @@ async def approve(_, m: Message):
         print("User hasn't started the bot (group join case)")
     except Exception as err:
         print(str(err))
-
  
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Start ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
